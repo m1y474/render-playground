@@ -21,7 +21,7 @@ RUN apt-get update \
 VOLUME ["/src"]
 
 WORKDIR /var/www/html
-COPY . ./
+COPY ./src .
 COPY ./docker/apache2/sites-available /etc/apache2/sites-available
 COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
 

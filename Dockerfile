@@ -18,4 +18,7 @@ RUN apt-get update \
     && cd /etc/apache2/mods-enabled \
     && ln -snf ../mods-available/rewrite.load
 
+COPY ./docker/apache2/sites-available /etc/apache2/sites-available
+COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
+
 WORKDIR /var/www/html
